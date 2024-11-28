@@ -12,13 +12,14 @@ path = "src/linfa_ml.rs"
 name = "candle_ml"
 path = "src/candle_ml.rs"
 
+[[bin]]
+name = "candle2"
+path = "src/candle2.rs"
+
 [dependencies]
-polars = { version = "0.32", features = ["lazy", "csv"] }
-candle-nn = { version = "0.4" }
-nalgebra = "0.29"
-linfa = "0.7.0"
-linfa-linear = "0.7.0"
-linfa-datasets = { version = "0.7.0", features = ["diabetes"] }
-ndarray = "0.15.6"
-anyhow = "1.0"
-candle-core = { git = "https://github.com/huggingface/candle.git", version = "0.8.0"}
+csv = "1.1.6"
+ndarray = "0.15.3"
+candle = { git = "https://github.com/huggingface/candle", package = "candle-core"}
+anyhow = "1.0.40"
+clap = { version = "4.5.1", features = ["derive"] }
+rand = "0.8.5"
